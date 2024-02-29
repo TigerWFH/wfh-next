@@ -1,5 +1,15 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## 性能优化问题
+react更新问题：
+1、当组件更新，会连带着更新所有的子组件，除非子组件处理了SCU
+1.1 只要子组件接收了props.xxx，即使没有使用，当xxx发生变更，也会触发rerender
+
+优化方向：
+1、排除不必要的props：这一部分是为了解决不必要的props发生了变更，引起的rerender问题
+2、对组件做SCU：这一部分是为了解决必须的props未发生变化引起的rerender问题
+
+
 ## 目录结构
 > nextjs原生不支持hash路由，如果要使用hash路由需要使用第三方库：next-hash-routes
 ```plain
