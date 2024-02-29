@@ -1,5 +1,24 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## 目录结构
+> nextjs原生不支持hash路由，如果要使用hash路由需要使用第三方库：next-hash-routes
+```plain
+    - app：AppRouter
+        - layout：布局
+        - page：页面
+        - loading：加载界面
+        - not-found：未找到界面
+        - error：错误界面
+        - global-error：全局错误界面
+        - route：API端点
+        - template：重新渲染的布局
+        - default：并行路由回退页面
+    - pages：PagesRouter
+    - components：
+    - public：静态资源文件
+    - src：可选用的应用程序源代码文件夹
+```
+
 ## Getting Started
 
 First, run the development server:
