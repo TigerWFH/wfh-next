@@ -15,6 +15,21 @@ react更新问题：
 1、排除不必要的props：这一部分是为了解决不必要的props发生了变更，引起的rerender问题
 2、对组件做SCU：这一部分是为了解决必须的props未发生变化引起的rerender问题
 
+## 集成whydidyourender
+```plain
+1、安装依赖：npm install @welldone-software/why-did-you-render --save-dev
+2、如果使用了automatic JSX transfomation，要确保preset-react是development模式，并配置importSource
+    [
+        '@babel/preset-react', {
+            runtime: 'automatic',
+            development: process.env.NODE_ENV === 'development',
+            importSource: '@welldone-software/why-did-you-render'
+        }
+    ]
+```
+3、创建wdyr.js文件
+4、在入口页引入wdyr.js
+- 方案一：增加tsconfig.json或者jsconfig.json配置jsxImportSource
 
 ## 目录结构
 > nextjs原生不支持hash路由，如果要使用hash路由需要使用第三方库：next-hash-routes
