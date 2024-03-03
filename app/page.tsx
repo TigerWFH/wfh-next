@@ -3,16 +3,18 @@ import Image from "next/image";
 import React, {useState, useCallback} from "react";
 
 class Fish extends React.Component<any, any> {
+  static whyDidYouRender = true;
   render() {
-    console.log("wfh---Fish---render", this.props)
+    // console.log("wfh---Fish---render", this.props)
     return <div>
       {this.props.fish}
     </div>
   }
 }
 class Cat extends React.Component<any, any> {
+  static whyDidYouRender = true;
   render() {
-    console.log("wfh---cat---render", this.props)
+    // console.log("wfh---cat---render", this.props)
     return <div>
       {this.props.cat}
     </div>
@@ -20,8 +22,9 @@ class Cat extends React.Component<any, any> {
 }
 
 class Monkey extends React.PureComponent<any, any> {
+  static whyDidYouRender = true;
   render() {
-    console.log("wfh---monkey---render", this.props)
+    // console.log("wfh---monkey---render", this.props)
     return <div>
       {this.props.monkey}
     </div>
@@ -37,10 +40,10 @@ export default function Home() {
     setFish("newFish")
   }, [])
   const onMonkey = useCallback(() => {
-    setFish("newMonkey")
+    setMonkey("newMonkey")
   }, [])
   const onCat = useCallback(() => {
-    setFish("newCat")
+    setCat("newCat")
   }, [])
 
   return (

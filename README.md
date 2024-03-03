@@ -1,5 +1,11 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## nextjs
+- Nextjs是一个使用react作为前端框架底层的支持SSR（请求时渲染）、SSG（构建时渲染）等技术的全栈框架
+- 默认使用SSR
+- 默认都是服务器组建，不能使用客户端功能。可以在文件顶部使用"use client"声明为客户端组建
+- nextjs@12之后，默认使用了Next.js Compiler，使用Rust【SWC】写的。
+
 ## 性能优化问题
 react更新问题：
 1、当组件更新，会连带着更新所有的子组件，除非子组件处理了SCU
@@ -28,6 +34,10 @@ react更新问题：
     - public：静态资源文件
     - src：可选用的应用程序源代码文件夹
 ```
+
+- src/pages/_app.tsx：自定义入口文件
+- src/pages/_document.tsx：自定义页面
+- 
 
 ## Getting Started
 
