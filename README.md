@@ -63,7 +63,22 @@ react 更新问题：
 
 - src/pages/\_app.tsx：自定义入口文件
 - src/pages/\_document.tsx：自定义页面
--
+
+## 应用路由和页面路由
+
+[参考资料](https://www.cnblogs.com/eddyz/p/17621208.html)
+
+> 在 Next.js 13 之前，Pages Router 是在 Next.js 中创建路由的主要方式。它使用直观的文件系统路由将每个文件映射到路由。新版本的 Next.js 仍然支持 Pages Router，但我们建议迁移到新的 应用路由 以利用 React 的最新功能
+>
+> App Router 中可用的新功能
+> 1、默认情况下，应用程序目录中的任何组件现在都是服务器组件。服务器组件在服务器上呈现。 他们的所有代码都保留在服务器上 - 这意味着我们无法使用客户端功能，例如窗口对象或 React 中的典型钩子。 服务器组件缺乏与客户端的交互性。可以通过在文件顶部声明“使用客户端”来声明客户端组件。
+>
+> 2、布局更简单
+>
+> 3、layout.js 文件，它可以位于每个路径的目录中
+>
+> Page
+> ![alt text](image.png)
 
 ## Getting Started
 
